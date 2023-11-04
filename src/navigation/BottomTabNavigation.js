@@ -18,10 +18,10 @@ export default function BottomTabNavigation() {
             const getIconName = () => {
               if(route.name === 'History') {
                 return 'time';
-              } else if (route.name === 'Memo') {
-                return 'create';
+              } else if(route.name === 'Home') {
+                return 'home';
               }
-              return 'home';
+              return 'create'
             }
             const iconName = getIconName();
             return (
@@ -32,7 +32,7 @@ export default function BottomTabNavigation() {
       }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="History" component={HistoryListScreen} />
-      <Tab.Screen name="Memo" component={DetailScreen} />
+      <Tab.Screen name="Detail" component={DetailScreen} />
     </Tab.Navigator>
   )
 }

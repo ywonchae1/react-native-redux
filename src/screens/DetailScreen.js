@@ -1,20 +1,27 @@
-import { View, Button } from 'react-native'
+import { View, Button, Text } from 'react-native'
 import React, { useState } from 'react'
 import Header from '../components/Header/Header'
+import LottoNumberBox from '../components/LottoNumberBox'
 import { TextInput } from 'react-native';
 
-export default function DetailScreen(props) {
+export default function DetailScreen({route}) {
     const [title, onChangeTitle] = useState('title');
     const [text, onChangeText] = useState('test');
 
     const onPressButton = () => {
 
     }
+
   return (
     <View style={{ flex: 1 }}>
+
       <Header>
         <Header.Title title="MEMO" />
       </Header>
+
+      <View style={{paddingVertical: 24}}>
+        <LottoNumberBox  date={route.params.date} numbers={route.params.numbers} />
+      </View>
 
       <View style={{
         flex: 1,
