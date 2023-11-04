@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeScreen from '../screens/HomeScreen';
 import HistoryListScreen from '../screens/HistoryListScreen';
 import TabIcon from '../components/TabIcon';
+import DetailScreen from '../screens/DetailScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +18,8 @@ export default function BottomTabNavigation() {
             const getIconName = () => {
               if(route.name === 'History') {
                 return 'time';
+              } else if (route.name === 'Memo') {
+                return 'create';
               }
               return 'home';
             }
@@ -29,6 +32,7 @@ export default function BottomTabNavigation() {
       }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="History" component={HistoryListScreen} />
+      <Tab.Screen name="Memo" component={DetailScreen} />
     </Tab.Navigator>
   )
 }
