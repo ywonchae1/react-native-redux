@@ -9,7 +9,7 @@ export default function SaveBtn() {
         style={{
           width: 80,
           paddingVertical: 5,
-          backgroundColor: 'blue',
+          backgroundColor: '#007aff',
           borderRadius: 50,
           alignItems: 'center',
           justifyContent: 'center'
