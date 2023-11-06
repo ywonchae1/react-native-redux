@@ -7,6 +7,7 @@ import SaveBtn from '../components/SaveBtn';
 import { FlatList } from 'react-native';
 import { Typography } from '../components/Typography';
 
+// test data
 const data = [{
     title: '내가 만약 로또에 당첨된다면 ...',
     text: '좋겠다 여기에 적는 게 의미가 있을까? 였나? 부자되세요 만수무강 무병장수하세요',
@@ -96,20 +97,20 @@ export default function DetailScreen({route}) {
             </View>
         </View>
       </View>
-      <FlatList
-                data={data}
-                // data={[{title: title, text: text}]}
-                renderItem={renderItem}
-                keyExtractor={(item)=>String(item.id)}
-                contentContainerStyle={{
-                    backgroundColor:'#d9d9d9',
-                    paddingHorizontal: 20,
-                    paddingVertical: 10,
-                    marginHorizontal: 24
-                }}
-                // style={{ paddingHorizontal: 20, height: 350 }}
-            />
-      
+      <View style={{ height: 208 }}>
+        <FlatList
+            data={data}
+            // data={[{title: title, text: text}]}
+            renderItem={renderItem}
+            keyExtractor={(item)=>String(item.id)}
+            contentContainerStyle={{
+                backgroundColor:'#d9d9d9',
+                paddingHorizontal: 20,
+                paddingVertical: 10,
+                marginHorizontal: 24
+            }}
+        />
+      </View>   
     </View>
   )
 }
